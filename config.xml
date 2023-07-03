@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="es.keev.whatschat.es" version="1.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>OpenChat</name>
+    <description>
+        Abra un chat de WhatsApp con cualquier número sin tener el número en la lista de contactos.   
+    </description>
+    <author email="info@keev.es" href="https://keev.es">
+       Keev studio
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <preference name="Fullscreen" value="true" />
+        <preference name="android-minSdkVersion" value="19" />
+        <preference name="android-targetSdkVersion" value="30" />
+        <preference name="DisallowOverscroll" value="true" />
+        <preference name="Orientation" value="portrait" />
+    <icon src="res/mipmap-mdpi/OpenChat.png" density="port-mdpi"/>
+    <icon src="res/mipmap-hdpi/OpenChat.png" density="port-hdpi"/>
+    <icon src="res/mipmap-xhdpi/OpenChat.png" density="port-xhdpi"/>
+    <icon src="res/mipmap-xxhdpi/OpenChat.png" density="port-xxhdpi"/>
+    <icon src="res/mipmap-xxxhdpi/OpenChat.png" density="port-xxxhdpi"/>
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>

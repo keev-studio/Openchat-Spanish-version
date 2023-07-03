@@ -1,0 +1,48 @@
+.iti__flag {background-image: url("img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("img/flags@2x.png");}
+}
+
+.uk-button-primary {
+    background-color: #32c160;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.uk-button-primary:hover {
+    background-color: #1b6c31;
+    color: #fff;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+.uk-button-link:hover {
+  text-decoration: none;
+}
+.wa-border {
+border: 1px solid #32c160;
+}
+.uk-input:focus {
+  border: 1px solid #1b6c31;
+  }
+
+  .uk-input {
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  div.iti__flag-container {
+    padding: 10px;
+  }
+
+  .iti__selected-dial-code {
+    font-size: 20px;
+    }
+    input#myNumber {
+      padding-left: 92px!important;
+    }
+
+    body, html { 
+      overflow-y: hidden; 
+      overflow-x: hidden;
+  }

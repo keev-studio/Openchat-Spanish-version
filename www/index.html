@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/uikit.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/uikit.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/intlTelInput.css">
+    <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/index.css">
+        <title>WhatsChat</title>
+    </head>
+    <body onload="appLoaded()">
+      <br>
+      <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300">
+        <div uk-scrollspy-class="uk-animation-slide-top">
+    <br>
+  </div>
+</div>
+    <br><br>
+    <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+    <div uk-scrollspy-class="uk-animation-slide-right">
+<div class="uk-text-center">
+<div class="uk-flex uk-flex-center">
+<div class="uk-card uk-card-default uk-card-body" style="width: 90%; border-radius: 10px;">
+<p style="font-size: 16px;">Ingrese un número</p>
+<div class="uk-inline wa-border">
+  <span class="uk-form"></span>
+  <input type="tel" class="uk-input" id="myNumber" onKeyUp="checkPrefix();checkZeros()">
+</div>
+<br><br>
+<div class="uk-text-right">
+  <button class="uk-button uk-button-small uk-button-link" href="#help" style="color:black" uk-toggle>ayuda</button>
+
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<br> <br>
+<div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 700">
+  <div uk-scrollspy-class="uk-animation-slide-left">
+<div class="uk-text-center">
+
+  <button style="font-weight: 800; border-radius:10px;" class="uk-button uk-button-primary uk-button-large" onclick="myFunction()">Abrir WhatsApp</button>
+</div>
+  <br> 
+  <div class="uk-text-center">
+  <button class="uk-button uk-button-small uk-button-link" href="#credits" style="color:black" uk-toggle>desarrollado por</button>
+
+  </div>
+</div> </div>
+
+
+<br><br>
+
+<div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 900">
+  <div uk-scrollspy-class="uk-animation-slide-bottom">
+<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="img/web_hi_res_512-bg.png" uk-img>
+</div>
+</div> </div>
+
+
+
+
+
+
+
+<div id="credits" class="uk-flex-top" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-text-center">
+      <img src="img/logo-cb-text.png" style="width: 60%;">
+
+      <br />
+      
+      <p>la aplicación fue creada por Keev studio</p>
+      <p>puedes contactar con nosotros:</p>
+      <div class=" uk-text-center" style="padding: 0;">
+      
+        <a href="https://keev.es" style="margin: 0 10px;" target="_blank"><img src="img/www.png"/></a>
+        <a href="mailto:info@keev.es" style="margin: 0 10px;" target="_blank"><img src="img/email.png"/></a>
+        <br>
+        <p>Si te gusta la aplicación, porfa danos 5 estrellas</p>
+        <a class="uk-button uk-button-small uk-button-primary"
+          href="https://play.google.com/store/apps/details?id=es.keev.whatschat.es"
+          style="padding: 0 30px;border-radius: 5px;" target="_blank"><b>Califica la App</b></a>
+        <br><br>
+<img src="img/5star.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="help" class="uk-flex-top" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+
+<div class="uk-text-center">
+  <h2>Ayuda</h2>
+  <hr>
+  <h5>Opción 1:</h5>
+<p>seleccione el prefijo y escriba el número </p>
+<h4>(PREFIJO) 123456789</h4>
+<hr>
+<h5>Opción 2:</h5>
+<p>escriba el número con código internacional que comience con + </p>
+<h4>+34123456789</h4>
+<hr>
+<h6>La app de WhatsApp tiene que ser instalada!</h6>
+</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- https://github.com/jackocnr/intl-tel-input -->
+<script src="js/intlTelInput.js"></script>
+  <script>
+    var input = document.querySelector("#myNumber");
+    window.intlTelInput(input, {
+      // allowDropdown: false,
+      // autoHideDialCode: false,
+      // autoPlaceholder: "off",
+      // dropdownContainer: document.body,
+      excludeCountries: ["as", "ai", "ag", "aw", "io", "cx", "cc", "km", "ck", "ki", "yt", "nu", ],
+      // formatOnDisplay: false,
+      // geoIpLookup: function(callback) {
+      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //     callback(countryCode);
+      //   });
+      // },
+      // hiddenInput: "full_number",
+      // initialCountry: "auto",
+      // localizedCountries: { 'de': 'Deutschland' },
+      // nationalMode: false,
+      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      // placeholderNumberType: "MOBILE",
+      preferredCountries: ["es", "mx", "co", "ar", "ve", "pe", "cl", "gt", "ec", "bo", "cu", "do", "hn", "py", "sv", "ni", "cr", "pa", "uy"],
+      separateDialCode: true,
+      //utilsScript: "build/js/utils.js",
+    });
+    
+    //if starts with + grey out the prefix
+    function checkPrefix() {
+      let inputPrefix = document.querySelector("#myNumber").value;
+      let inputCheck = inputPrefix.startsWith("+");
+      if (inputCheck) {
+        document.getElementsByClassName("iti__selected-dial-code")[0].style.display = "none";
+        document.getElementsByClassName("iti__arrow")[0].style.display = "none";
+      } else if (!inputCheck) {
+        document.getElementsByClassName("iti__selected-dial-code")[0].style.display = "initial";
+        document.getElementsByClassName("iti__arrow")[0].style.display = "initial";
+      } else {
+
+      }
+    };
+
+//checking double zeros and changing them to +
+    function checkZeros() {
+      let inputZeros = document.querySelector("#myNumber").value;
+      let inputZerosDetected = inputZeros.startsWith("00");
+      let zerosReplaced = inputZeros.replace('00','+');
+      if (inputZerosDetected) {
+        document.getElementById('myNumber').value = zerosReplaced
+    } else {
+    }
+  }
+  </script>
+
+
+  <script>
+function myFunction() {
+  let x = document.getElementById("myNumber").value;
+  let y = document.getElementsByClassName("iti__selected-dial-code");
+  let z = y[0].innerHTML 
+  var n = x.startsWith("+");
+  if (n){
+    window.open("https://api.whatsapp.com/send?phone=" + x);
+  }else if (x.match(/^\d/)) {
+window.open("https://api.whatsapp.com/send?phone=" + z + x);
+  }else{
+    alert("Por favor ingrese el numero de telefono ");
+  }
+}
+</script>    
+<script type="text/javascript">
+  function appLoaded() {
+       var divider = 5;
+       var loaded = parseInt(localStorage.getItem('loaded'), 10),
+         loaded_numb = loaded ? loaded + 1 : 1;
+       var result = loaded_numb % divider
+       localStorage.setItem('loaded', loaded_numb);
+       if (result === 0) {
+         cordova.plugins.AppReview.requestReview().catch(function () {
+           return cordova.plugins.AppReview.openStoreScreen();
+         });
+       } else {}
+     };
+   </script>
+        <script src="cordova.js"></script>
+    </body>
+</html>
